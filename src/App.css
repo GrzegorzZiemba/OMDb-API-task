@@ -15,6 +15,10 @@ p {
 	text-align: center;
 }
 
+.mainContainer {
+	margin: 3rem 15rem;
+}
+
 button {
 	width: 160px;
 	height: 30px;
