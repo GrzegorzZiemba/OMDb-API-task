@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/OMDb-API-task/static/css/main.378ee6e5.chunk.css",
-    "main.js": "/OMDb-API-task/static/js/main.656b30cd.chunk.js",
-    "main.js.map": "/OMDb-API-task/static/js/main.656b30cd.chunk.js.map",
+    "main.js": "/OMDb-API-task/static/js/main.e51d1ffd.chunk.js",
+    "main.js.map": "/OMDb-API-task/static/js/main.e51d1ffd.chunk.js.map",
     "runtime-main.js": "/OMDb-API-task/static/js/runtime-main.2c89c120.js",
     "runtime-main.js.map": "/OMDb-API-task/static/js/runtime-main.2c89c120.js.map",
     "static/js/2.4d75f1ca.chunk.js": "/OMDb-API-task/static/js/2.4d75f1ca.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.2c89c120.js",
     "static/js/2.4d75f1ca.chunk.js",
     "static/css/main.378ee6e5.chunk.css",
-    "static/js/main.656b30cd.chunk.js"
+    "static/js/main.e51d1ffd.chunk.js"
   ]
 }
