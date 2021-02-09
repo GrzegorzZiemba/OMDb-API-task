@@ -22,7 +22,7 @@ const Search = () => {
 	//fetching data from the server
 	const getDataFromTheServer = (OMDB_API_KEY, callback) => {
 		fetch(
-			`http://www.omdbapi.com/?apikey=46c460bb&t=${titleOnSubmit}&plot=${
+			`https://www.omdbapi.com/?apikey=46c460bb&t=${titleOnSubmit}&plot=${
 				showPlotTwist ? "full" : "short"
 			}`
 		)
