@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 const SearchInput = ({ getData }) => {
-	// const [value, setValue] = useState("");
 	return (
-		<div>
+		<div className="flexContainer">
 			<input type="text" onChange={(e) => getData(e.target.value)} />
-			title
+			<h3>title you are looking for</h3>
 		</div>
 	);
 };

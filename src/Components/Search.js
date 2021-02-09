@@ -5,8 +5,13 @@ const OMDB_API_KEY = "46c460bb";
 const Search = () => {
 	const [data, setData] = useState("");
 	const [inputValue, setinputValue] = useState("");
+	//make titleOnSubmit variable to re-render only when submit is clicked
 	const [titleOnSubmit, setTitleOnSubmit] = useState("");
 
+	//make handlerFor plotTwist
+	const [showPlotTwist, setPlotTwist] = useState(true);
+
+	// input callback handler to handle changes on the input area
 	const getDataFromInput = (inputValue) => {
 		setinputValue(inputValue);
 	};
@@ -14,7 +19,9 @@ const Search = () => {
 	//fetching data from the server
 	const getDataFromTheServer = (OMDB_API_KEY, callback) => {
 		fetch(
-			`http://www.omdbapi.com/?apikey=46c460bb&t=${titleOnSubmit}&plot=short`
+			`http://www.omdbapi.com/?apikey=46c460bb&t=${titleOnSubmit}&plot=${
+				showPlotTwist ? "full" : "short"
+			}`
 		)
 			.then((response) => response.json())
 			.then((data) => callback(data))
@@ -32,7 +39,7 @@ const Search = () => {
 	useEffect(() => {
 		dataFrom();
 		console.log(data);
-	}, [titleOnSubmit]);
+	}, [titleOnSubmit, showPlotTwist]);
 
 	return (
 		<h1>
@@ -49,6 +56,10 @@ const Search = () => {
 			<h1>{data.Title}</h1>
 			<h2>{data.Year}</h2>
 			<p>{data.Rated}</p>
+			<button onClick={() => setPlotTwist(!showPlotTwist)}>
+				Wanna see plot twist ?
+			</button>
+			<p>{data.Plot}</p>
 		</h1>
 	);
 };
